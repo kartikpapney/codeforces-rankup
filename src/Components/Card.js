@@ -1,5 +1,6 @@
 import React from 'react'
 import {Card, Container, Button, Spinner} from 'react-bootstrap'
+
 function CardView(props) {
   const color = {"newbie": "rgb(204,204,204)", "pupil": "rgb(138,235,118)", "specialist": "rgb(122,221,187)"
   , "expert": "rgb(170,170,254)", "candidate master": "rgb(224,129,254)", 

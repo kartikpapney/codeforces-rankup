@@ -22,12 +22,13 @@
 .problems {
   margin: 0.6rem;
   display: flex;
+  justify-content: center;
   overflow: auto;
   width: auto;
   height: auto;
 }
 .problem-container {
-  /* align-items: center; */
+  align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
