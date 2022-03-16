@@ -9,11 +9,10 @@ export default function Home() {
     const [id, setId] = useState('');
 
     const navigate = useNavigate();
-
     const handleClick = () => {
         navigate(`/${id}&${friend}`);
     }
-
+    
     return (
         <div>
             <InputGroup className="mb-3">
@@ -34,7 +33,7 @@ export default function Home() {
                 onChange={(e) => setFriend(e.target.value)}
             />
             </InputGroup>
-                <div className='btn-container'>
+                <div style={{"display": "flex", "justifyContent": "right"}}>
                 <Button variant="secondary" onClick={handleClick}>Get Problems</Button>
             </div>   
         </div>

@@ -9,14 +9,12 @@ import {
 
 function App() {
   return <div className='App'>
-    <div className='main-container'>
-      {
-        useRoutes([
-          { path: "/", element: <Home /> },
-          { path: "/:id&:friend", element: <Main /> },
-        ])
-      }
-    </div>
+    {
+      useRoutes([
+        { path: "/", element: <Home /> },
+        { path: "/:id&:friend", element: <Main /> },
+      ])
+    }
   </div>
 }
 
