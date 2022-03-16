@@ -1,7 +1,7 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router";
-import { useState, useEffect } from 'react';
-import {InputGroup, FormControl, Button, ListGroup} from 'react-bootstrap'
+import { useNavigate } from "react-router";
+import { useState } from 'react';
+import {InputGroup, FormControl, Button} from 'react-bootstrap'
 
 export default function Home() {
 
@@ -12,7 +12,7 @@ export default function Home() {
     const handleClick = () => {
         navigate(`/${id}&${friend}`);
     }
-    
+
     return (
         <div>
             <InputGroup className="mb-3">

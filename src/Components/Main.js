@@ -70,13 +70,13 @@ export default function Main() {
                 const problems = {}
                 for(var r = 100; r<=3500; r+=100) problems[r] = new Map();
                 result.map((obj, idx) => {
-                if(obj.verdict === 'OK') {
-                    const {contestId, index, name, rating, tags} = obj.problem;
-                    if(contestId && index && name && rating && tags) {
-                        const id = contestId + "/" + index;
-                        problems[rating][id] = {contestId, index, name, rating, tags, solved:false};
+                    if(obj.verdict === 'OK') {
+                        const {contestId, index, name, rating, tags} = obj.problem;
+                        if(contestId && index && name && rating && tags) {
+                            const id = contestId + "/" + index;
+                            problems[rating][id] = {contestId, index, name, rating, tags, solved:false};
+                        }
                     }
-                }
             });
 
             fetch(`https://codeforces.com/api/user.status?handle=${id}&from=1`)
