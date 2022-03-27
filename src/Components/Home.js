@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router";
 import { useState } from 'react';
 import {InputGroup, FormControl, Button} from 'react-bootstrap'
-
+import logo from '../Image/logo.png'
 export default function Home() {
 
     const [friend, setFriend] = useState('');
@@ -15,6 +15,7 @@ export default function Home() {
 
     return (
         <div>
+            <img src={logo}/>
             <InputGroup className="mb-3">
             <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
             <FormControl
