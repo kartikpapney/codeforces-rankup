@@ -2,7 +2,7 @@
 # Website Link: [codeforces-rankup](https://codeforces-rankup.web.app/)
 
 Hi Everyone!!!
-Are you struggling on Codeforces? Are you stucked at some rating? Do u wanna improve? If Yes, then I've a solution for you.
+Are you struggling with Codeforces? Are you stuck at some rating? Do u wanna improve? If Yes, then I have a solution for you.
 
 ### When you struggle at CF?
 One of the major reason of saturated rating on codeforces or any other coding platform is when you don't solve problems above your current level. Let's say I'm rated 1400 on codeforces then to improve my rating I should solve more problems with rating >= 1400. Now all these problems should be well hand picked.
