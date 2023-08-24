@@ -1,7 +1,7 @@
 <img src="./public/logo.png" alt="codeforces-rankup"/>
 
 # codeforces-rankup 
-# Website Link: [codeforces-rankup](https://codeforces-rankup.web.app/)
+# Website Link: [codeforces-rankup](https://master--infallible-albattani-89ab3f.netlify.app/)
 
 Hi Everyone!!!
 Are you struggling with Codeforces? Are you stuck at some rating? Do u wanna improve? If Yes, then I have a solution for you.
