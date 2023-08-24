@@ -1,4 +1,3 @@
-import './App.css';
 import React from "react";
 import Home from './Components/Home'
 import Main from './Components/Main'
