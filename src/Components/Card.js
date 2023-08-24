@@ -8,7 +8,7 @@ function CardView(props) {
       <img className="mb-2 w-[250px] h-[250px] " src={profile.titlePhoto} alt=""/>
       <h5 className="mb-2 text-sm font-bold tracking-tight text-gray-900"><span style={{color: colors[profile.rank]}}>{profile.rank || "Unranked"}</span> @ {profile.rating || "Unrated"}</h5>
       <div>
-        <a href={`https://codeforces.com/profile/${profile.handle}`} target='_blank' className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 hover:bg-blue-800">
+        <a href={`https://codeforces.com/profile/${profile.handle}`} rel="noopener noreferrer" target='_blank' className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 hover:bg-blue-800">
           {profile.handle}
         </a>
       </div>

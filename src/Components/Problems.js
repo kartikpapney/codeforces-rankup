@@ -35,7 +35,7 @@ export default function Problems({ props }) {
                                             target="_blank"
                                             className={`${mprob.solved ? "bg-green-100" : "bg-red-100"} p-2 cursor-pointer text-sm`}
                                         >
-                                            <a href={`https://codeforces.com/contest/${mprob.contestId}/problem/${mprob.index}`} target='_blank'>{mprob.name}</a>
+                                            <a href={`https://codeforces.com/contest/${mprob.contestId}/problem/${mprob.index}`} rel="noopener noreferrer" target='_blank'>{mprob.name}</a>
                                         </td>
                                     </tr>
                                 );
