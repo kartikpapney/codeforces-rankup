@@ -92,7 +92,7 @@ export default function Main() {
 
     return (
         <div className="flex bg-blue-200 w-screen min-h-screen h-full items-center justify-center">
-            <div className="m-10 p-10 w-8/12 min-h-[400px] rounded-se-3xl shadow-md flex flex-wrap justify-center items-center bg-white overflow-autO">
+            <div className="min-w-fit w-8/12 p-10 min-h-[400px] rounded-se-3xl shadow-md flex flex-wrap justify-center items-center bg-white overflow-autO">
                 <CardView props={userProfile} />
                 <CardView props={friendProfile} />
                 <Problems props={

@@ -14,7 +14,7 @@ export default function Home() {
 
     return (
         <div className="flex bg-blue-200 w-screen h-screen items-center justify-center">
-            <div className="p-4 w-8/12 rounded-se-3xl shadow-md flex flex-col justify-center items-center bg-white ">
+            <div className="p-4 min-w-fit w-8/12 rounded-se-3xl shadow-md flex flex-col justify-center items-center bg-white ">
                 <img src={logo} className="lg:h-[400px] sm:h-[200px] mb-2" alt="Logo" />
                 <div className="mb-2"> 
                     <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
