@@ -1,50 +1,49 @@
 import React from 'react'
-import {ListGroup, DropdownButton, Dropdown, ButtonGroup, Container, Spinner} from 'react-bootstrap'
+import Dropdown from './Dropdown.js';
+import { rating, tags } from '../constant.js';
 
-export default function Problems({problemRating, problemTag, setProblemRating, setProblemTag, list, avRating, tags}) {
-    const variant = "secondary";
+export default function Problems({ props }) {
+    
+
+    const { problemRating, problemTag, setProblemRating, setProblemTag, list={} } = props
+
     return (
-        <Container style={{"display": "flex", "justifyContent": "center", "alignItems": "center"}}>
-            {(list == undefined)?<Spinner animation="border" variant="secondary" />:(
-                <Container className='problem-container'>
-                    <DropdownButton 
-                        as={ButtonGroup}
-                        id={`dropdown-variants-${variant}`}
-                        variant={variant.toLowerCase()}
-                        title={problemRating}
-                        onSelect={(e) => {setProblemRating(e);}}
-                    >
-                            {
-                                avRating.map((r) => <Dropdown.Item key={r} eventKey={r}>{r}</Dropdown.Item>)
-                            }
-                    </DropdownButton>
-                    <DropdownButton style={{"marginTop": "0.5rem"}}
-                        as={ButtonGroup}
-                        id={`dropdown-variants-${variant}`}
-                        variant={variant.toLowerCase()}
-                        title={problemTag}
-                        onSelect={(e) => {setProblemTag(e);}}
-                    >
-                            {
-                                tags.map((r) => <Dropdown.Item key={r} eventKey={r}>{r}</Dropdown.Item>)
-                            }
-                    </DropdownButton>
-                    {(Object.keys(list).length === 0)?<p><b>Nothing To Show</b></p>:
-                    <Container className='problems'>
-                        <ListGroup>
-                            {
-                                Object.keys(list).map((key) => {
-                                    const mprob = list[key];
-                                    return (mprob.solved
-                                    ?<ListGroup.Item href={`https://codeforces.com/contest/${mprob.contestId}/problem/${mprob.index}`} target="_blank" action variant="success"  key={key}>{mprob.name}</ListGroup.Item>
-                                    :<ListGroup.Item href={`https://codeforces.com/contest/${mprob.contestId}/problem/${mprob.index}`} target="_blank" action variant="light" key={key}>{mprob.name}</ListGroup.Item>)
-                                })
-                            }
-                        </ListGroup>
-                    </Container>}
-                </Container>
-            )
-            }
-        </Container>
+        <div className="flex-1 flex-col">
+            <div className='flex flex-col items-start'>
+                <Dropdown
+                    props={{
+                        list: rating,
+                        value: problemRating,
+                        setValue: setProblemRating,
+                    }} />
+                <Dropdown
+                    props={{
+                        list: tags,
+                        value: problemTag,
+                        setValue: setProblemTag
+                    }}
+                />
+            </div>
+            <div className='m-1 h-[400px] overflow-y-auto max-w-[300px]'>
+                    <table className="w-full border p-2">
+                        <tbody>
+                            {Object.keys(list).map((key) => {
+                                const mprob = list[key];
+                                return (
+                                    <tr key={key}>
+                                        <td
+                                            target="_blank"
+                                            className={`${mprob.solved ? "bg-green-100" : "bg-red-100"} p-2 cursor-pointer text-sm`}
+                                        >
+                                            <a href={`https://codeforces.com/contest/${mprob.contestId}/problem/${mprob.index}`} target='_blank'>{mprob.name}</a>
+                                        </td>
+                                    </tr>
+                                );
+                            })}
+                        </tbody>
+                    </table>
+            </div >
+        </div>
+
     )
 }
