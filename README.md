@@ -1,7 +1,7 @@
 <img src="./public/logo.png" alt="codeforces-rankup"/>
 
 # codeforces-rankup 
-# Website Link: [codeforces-rankup](https://master--infallible-albattani-89ab3f.netlify.app/)
+# Website Link: [codeforces-rankup](https://rankup.kartikpapney.xyz/)
 
 Hey everyone!
 
